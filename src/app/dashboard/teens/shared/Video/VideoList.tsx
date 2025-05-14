@@ -133,7 +133,7 @@ const VideoList = forwardRef<VideoListRef, VideoListProps>(({ isCommunity = fals
       )}
       <div className={`flex gap-4 max-w-4xl mx-auto w-full flex-wrap md:flex-nowrap ${isCommunity ? '-mt-8' : ''}`}>
         <div className="w-full md:w-[70%] relative h-12">
-          <Input placeholder="Cari Videomu.." className="rounded-full h-full px-11 border-gray-200 shadow-sm hover:shadow-md transition-all duration-200 focus:border-secondary-yellow text-base" value={search} onChange={handleSearch} />
+          <Input placeholder="Cari Videomu.." className="rounded-full h-full px-11 border-gray-200 shadow-sm hover:shadow-md transition-all duration-200 focus:border-teal-500 text-base" value={search} onChange={handleSearch} />
           <div className="absolute left-4 top-1/2 transform -translate-y-1/2 flex items-center justify-center">
             <Search className="text-gray-400" size={18} />
           </div>
@@ -174,7 +174,7 @@ const VideoList = forwardRef<VideoListRef, VideoListProps>(({ isCommunity = fals
         {totalPages > 1 && (
           <div className="flex justify-center my-8">
             <Pagination
-              color="#d9a821"
+              color="#0f766e"
               total={totalPages}
               value={page}
               onChange={setPage}
@@ -184,8 +184,8 @@ const VideoList = forwardRef<VideoListRef, VideoListProps>(({ isCommunity = fals
                 control: {
                   border: '1px solid #e5e7eb',
                   '&[dataActive]': {
-                    backgroundColor: '#d9a821',
-                    borderColor: '#d9a821',
+                    backgroundColor: '#0f766e',
+                    borderColor: '#0f766e',
                   },
                 },
               }}

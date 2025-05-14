@@ -165,7 +165,7 @@ export default function VideoCard({ videoData }: VideoCardProps) {
                     .join(' ')
                 : 'Processing...'}
             </div>
-            <Progress value={progress} className="w-3/4" color="yellow" size="sm" radius="xl" />
+            <Progress value={progress} className="w-3/4" color="teal" size="sm" radius="xl" />
             <div className="text-xs text-gray-400">{progress}%</div>
           </div>
         ) : (
@@ -179,10 +179,10 @@ export default function VideoCard({ videoData }: VideoCardProps) {
       <h3 className="text-lg mt-2 font-semibold truncate px-2">{title}</h3>
 
       <div className="flex justify-between mt-auto pb-1 px-2">
-        <span className="px-3 py-1 bg-yellow-100 text-amber-600 text-xs font-medium rounded-full truncate max-w-[60%] border border-amber-600">{subject}</span>
+        <span className="px-3 py-1 bg-lime-100 text-lime-600 text-xs font-medium rounded-full truncate max-w-[60%] border border-lime-600">{subject}</span>
         <div className="flex items-center gap-2">
           <p className="text-gray-400 text-sm">{formatDate(created_at)}</p>
-          <span className="text-blue-500 text-xs font-medium flex items-center gap-1">
+          <span className="text-teal-500 text-xs font-medium flex items-center gap-1">
             +2 EXP <Trophy size={12} className="" />
           </span>
         </div>

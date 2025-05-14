@@ -87,7 +87,7 @@ export default function PromptBar({ onVideoRequest }: PromptBarProps) {
       {/* Input form */}
       <form onSubmit={handleSubmit} className="flex w-full">
         <div className="flex w-full pl-4 pr-1.5 items-center relative bg-white py-1.5 text-base outline-none h-14">
-          <Sparkles className="text-yellow-500" size={30} />
+          <Sparkles className="text-lime-500" size={30} />
           <Input placeholder="Ketik atau upload soal di sini" className="!text-lg border-none shadow-none focus:ring-0" value={prompt} onChange={(e) => setPrompt(e.target.value)} />
 
           <input type="file" ref={fileInputRef} accept="image/*" onChange={handleImageChange} className="hidden" />
@@ -110,7 +110,7 @@ export default function PromptBar({ onVideoRequest }: PromptBarProps) {
               <Globe className="text-gray-500" size={18} />
             </Button>
           </div>
-          <button type="submit" className="bg-secondary-yellow h-11 ml-3 rounded-full px-4 flex items-center gap-2 justify-center text-white font-bold cursor-pointer shadow-md hover:bg-secondary-yellow/90 active:bg-secondary-yellow/80 transition-all duration-200 ease-in-out focus:ring-2 focus:ring-yellow-200 focus:ring-offset-2">
+          <button type="submit" className="bg-teal-500 h-11 ml-3 rounded-full px-4 flex items-center gap-2 justify-center text-white font-bold cursor-pointer shadow-md hover:bg-teal-600 active:bg-teal-700 transition-all duration-200 ease-in-out focus:ring-2 focus:ring-teal-200 focus:ring-offset-2">
             <Video className="text-white" size={18} />
             <p className="text-center pb-[1px] sm:block hidden">Create</p>
           </button>

@@ -248,7 +248,7 @@ export default function Chat({ imageData, timestamp }: ChatProps) {
       <div className="overflow-y-auto h-[70vh] flex flex-col gap-4 pb-20 px-6">
         {messages.map((message) => (
           <div key={message.id} className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-            <div className={`whitespace-pre-wrap p-4 rounded-lg max-w-[80%] ${message.role === 'user' ? 'bg-blue-300/50 rounded-tr-none' : 'bg-gray-100 border border-gray-200 rounded-tl-none'}`}>
+            <div className={`whitespace-pre-wrap p-4 rounded-lg max-w-[80%] ${message.role === 'user' ? 'bg-teal-300/50 rounded-tr-none' : 'bg-gray-100 border border-gray-200 rounded-tl-none'}`}>
               {message.role === 'user' ? (
                 typeof message.content === 'string' ? (
                   <div>{message.content}</div>
@@ -333,8 +333,8 @@ export default function Chat({ imageData, timestamp }: ChatProps) {
 
       {imagePreview && (
         <div className="absolute bottom-[75px] left-0 w-full px-3">
-          <div className="bg-blue-500/10 py-1 px-3 rounded-t-md text-xs flex items-center gap-1 border-t border-x border-blue-200 max-w-fit mx-auto">
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-500">
+          <div className="bg-teal-500/10 py-1 px-3 rounded-t-md text-xs flex items-center gap-1 border-t border-x border-teal-200 max-w-fit mx-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-teal-500">
               <circle cx="12" cy="12" r="10"></circle>
               <polyline points="12 6 12 12 16 14"></polyline>
             </svg>
@@ -345,17 +345,17 @@ export default function Chat({ imageData, timestamp }: ChatProps) {
 
       <form onSubmit={handleFormSubmit} className="w-full absolute bottom-0 p-3 bg-white border-t">
         <div className="flex gap-2">
-          <input id="chat-input" className="flex-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" value={input} placeholder={isProcessing ? 'Processing image...' : imagePreview ? `Ask about video at ${timestamp || 'current position'}...` : 'Type a message...'} onChange={handleInputChange} disabled={isProcessing} />
-          <button type="submit" className="p-3 px-5 bg-blue-500 text-white rounded-md hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed" disabled={isLoading || isProcessing || (!input.trim() && !imageUrl)}>
+          <input id="chat-input" className="flex-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent" value={input} placeholder={isProcessing ? 'Processing image...' : imagePreview ? `Ask about video at ${timestamp || 'current position'}...` : 'Type a message...'} onChange={handleInputChange} disabled={isProcessing} />
+          <button type="submit" className="p-3 px-5 bg-teal-500 text-white rounded-md hover:bg-teal-600 disabled:opacity-50 disabled:cursor-not-allowed" disabled={isLoading || isProcessing || (!input.trim() && !imageUrl)}>
             {isLoading ? 'Sending...' : 'Send'}
           </button>
         </div>
         {isProcessing && (
           <div className="flex items-center justify-center mt-2 space-x-1">
-            <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
-            <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-            <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></div>
-            <span className="text-xs text-blue-500 ml-2">Processing image...</span>
+            <div className="w-2 h-2 bg-teal-500 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
+            <div className="w-2 h-2 bg-teal-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+            <div className="w-2 h-2 bg-teal-500 rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></div>
+            <span className="text-xs text-teal-500 ml-2">Processing image...</span>
           </div>
         )}
       </form>

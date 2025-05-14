@@ -140,7 +140,7 @@ export default function BookPage({ params }: { params: Promise<{ id: string }> }
           <p className="text-2xl font-bold">Oops! Error loading storybook</p>
           <p className="text-gray-600 mt-2">{error?.toString() || 'Book not found'}</p>
         </div>
-        <Link href="/dashboard/kids" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full shadow-md hover:shadow-lg transition-all transform hover:scale-105 border border-blue-400">
+        <Link href="/dashboard/kids" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-teal-500 to-teal-600 text-white rounded-full shadow-md hover:shadow-lg transition-all transform hover:scale-105 border border-teal-400">
           <Home className="mr-2" size={18} />
           Return to Dashboard
         </Link>
@@ -153,10 +153,10 @@ export default function BookPage({ params }: { params: Promise<{ id: string }> }
     return (
       <div className="min-h-screen flex flex-col items-center justify-center p-4">
         <div className="text-center mb-8 flex flex-col items-center justify-center">
-          <div className="text-amber-500 mb-4 animate-bounce">
+          <div className="text-lime-500 mb-4 animate-bounce">
             <BookOpen size={48} />
           </div>
-          <h2 className="text-2xl font-bold text-blue-800 mb-4">Loading your storybook...</h2>
+          <h2 className="text-2xl font-bold text-teal-800 mb-4">Loading your storybook...</h2>
         </div>
       </div>
     );
@@ -165,11 +165,11 @@ export default function BookPage({ params }: { params: Promise<{ id: string }> }
   return (
     <div className="pb-12">
       {/* Enhanced Header with gradient and decorative elements */}
-      <div className="mb-8 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-4 flex justify-between items-center shadow-lg relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500 rounded-full opacity-20 transform translate-x-16 -translate-y-16"></div>
-        <div className="absolute bottom-0 left-0 w-24 h-24 bg-amber-400 rounded-full opacity-10 transform -translate-x-12 translate-y-12"></div>
+      <div className="mb-8 rounded-xl bg-gradient-to-r from-teal-600 to-teal-700 px-6 py-4 flex justify-between items-center shadow-lg relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-teal-500 rounded-full opacity-20 transform translate-x-16 -translate-y-16"></div>
+        <div className="absolute bottom-0 left-0 w-24 h-24 bg-lime-400 rounded-full opacity-10 transform -translate-x-12 translate-y-12"></div>
 
-        <Link href="/dashboard/kids" className="inline-flex items-center bg-blue-500 hover:bg-blue-600 text-white pl-3 pr-4 py-2 rounded-full transition-all transform hover:scale-105 border border-blue-400 shadow-md z-10">
+        <Link href="/dashboard/kids" className="inline-flex items-center bg-teal-500 hover:bg-teal-600 text-white pl-3 pr-4 py-2 rounded-full transition-all transform hover:scale-105 border border-teal-400 shadow-md z-10">
           <ArrowLeft className="mr-1" size={16} />
           <span className="font-medium">Back</span>
         </Link>
@@ -178,7 +178,7 @@ export default function BookPage({ params }: { params: Promise<{ id: string }> }
 
         <div className="flex gap-2 z-10">
           {book.theme?.split(',').map((theme, index) => (
-            <span key={index} className="bg-amber-100 text-amber-600 border-amber-300 border px-2 py-0.5 rounded-full text-xs font-medium">
+            <span key={index} className="bg-lime-100 text-lime-600 border-lime-300 border px-2 py-0.5 rounded-full text-xs font-medium">
               {theme.trim().charAt(0).toUpperCase() + theme.trim().slice(1)}
             </span>
           ))}
@@ -188,8 +188,8 @@ export default function BookPage({ params }: { params: Promise<{ id: string }> }
       {/* Main content - Storybook Viewer */}
       <div className="relative bg-white rounded-xl shadow-lg overflow-hidden border-2 border-gray-100">
         {/* Decorative elements */}
-        <div className="absolute -top-2 -right-2 h-12 w-12 rounded-full bg-yellow-100 opacity-40"></div>
-        <div className="absolute -bottom-2 -left-2 h-12 w-12 rounded-full bg-blue-100 opacity-40"></div>
+        <div className="absolute -top-2 -right-2 h-12 w-12 rounded-full bg-lime-100 opacity-40"></div>
+        <div className="absolute -bottom-2 -left-2 h-12 w-12 rounded-full bg-teal-100 opacity-40"></div>
 
         {/* Background book appearance for 3D effect */}
         <div
@@ -273,7 +273,7 @@ export default function BookPage({ params }: { params: Promise<{ id: string }> }
 
         {/* Page number indicator */}
         <div className="absolute bottom-4 left-0 right-0 text-center">
-          <div className="inline-flex items-center gap-1 px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full text-white text-sm shadow-md">
+          <div className="inline-flex items-center gap-1 px-4 py-2 bg-gradient-to-r from-teal-600 to-teal-700 rounded-full text-white text-sm shadow-md">
             <BookOpen size={16} className="mr-1" />
             <span>{currentImageIndex === 0 ? 'Cover' : `Page ${currentImageIndex}`}</span>
             <span> of {images.length - 1} pages</span>
@@ -282,13 +282,13 @@ export default function BookPage({ params }: { params: Promise<{ id: string }> }
 
         {/* Navigation arrows - enhanced with better styling */}
         {currentImageIndex > 0 && (
-          <button onClick={goToPrevImage} className="absolute left-4 top-1/2 -translate-y-1/2 bg-gradient-to-r from-amber-400 to-amber-500 rounded-full p-3 shadow-lg hover:shadow-xl transition-all transform hover:scale-110 border-2 border-amber-300" aria-label="Previous page">
+          <button onClick={goToPrevImage} className="absolute left-4 top-1/2 -translate-y-1/2 bg-gradient-to-r from-lime-400 to-lime-500 rounded-full p-3 shadow-lg hover:shadow-xl transition-all transform hover:scale-110 border-2 border-lime-300" aria-label="Previous page">
             <ChevronLeft size={24} className="text-white" />
           </button>
         )}
 
         {currentImageIndex < images.length - 1 && (
-          <button onClick={goToNextImage} className="absolute right-4 top-1/2 -translate-y-1/2 bg-gradient-to-r from-amber-400 to-amber-500 rounded-full p-3 shadow-lg hover:shadow-xl transition-all transform hover:scale-110 border-2 border-amber-300" aria-label="Next page">
+          <button onClick={goToNextImage} className="absolute right-4 top-1/2 -translate-y-1/2 bg-gradient-to-r from-lime-400 to-lime-500 rounded-full p-3 shadow-lg hover:shadow-xl transition-all transform hover:scale-110 border-2 border-lime-300" aria-label="Next page">
             <ChevronRight size={24} className="text-white" />
           </button>
         )}
@@ -297,13 +297,13 @@ export default function BookPage({ params }: { params: Promise<{ id: string }> }
       {/* Bottom pagination dots - enhanced */}
       <div className="flex justify-center gap-2 mt-8">
         {images.map((_, index) => (
-          <button key={index} className={`transition-all ${currentImageIndex === index ? 'h-3 w-10 bg-gradient-to-r from-amber-400 to-amber-500 rounded-full shadow-md' : 'h-3 w-3 bg-gray-300 hover:bg-gray-400 rounded-full hover:scale-110'}`} onClick={() => handlePaginationClick(index)} aria-label={`Go to page ${index === 0 ? 'cover' : index}`} />
+          <button key={index} className={`transition-all ${currentImageIndex === index ? 'h-3 w-10 bg-gradient-to-r from-lime-400 to-lime-500 rounded-full shadow-md' : 'h-3 w-3 bg-gray-300 hover:bg-gray-400 rounded-full hover:scale-110'}`} onClick={() => handlePaginationClick(index)} aria-label={`Go to page ${index === 0 ? 'cover' : index}`} />
         ))}
       </div>
 
       {/* Back to Dashboard Button */}
       <div className="mt-8 flex justify-center">
-        <Link href="/dashboard/kids" className="bg-gradient-to-r from-blue-500 to-blue-600 text-white pl-4 pr-5 py-3 rounded-full flex items-center gap-2 transition-all transform hover:scale-105 border border-blue-400 shadow-md">
+        <Link href="/dashboard/kids" className="bg-gradient-to-r from-teal-500 to-teal-600 text-white pl-4 pr-5 py-3 rounded-full flex items-center gap-2 transition-all transform hover:scale-105 border border-teal-400 shadow-md">
           <Home size={18} />
           <p className="font-bold">Kembali ke Dashboard</p>
         </Link>

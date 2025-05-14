@@ -123,7 +123,7 @@ function SignUpPage() {
             <div className="mx-auto flex justify-center mb-6">
               <Image src="/logo-expand.svg" className="w-1/2" alt="Jawab.in Logo" width={300} height={300} priority />
             </div>
-            <CardTitle className="text-2xl font-bold text-center text-primary-blue mb-5">Daftar Akun PINTARU</CardTitle>
+            <CardTitle className="text-2xl font-bold text-center text-primary-blue mb-5">Daftar Akun Pinterra</CardTitle>
 
             <StepIndicator currentStep={currentStep} totalSteps={totalSteps} />
           </CardHeader>

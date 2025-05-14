@@ -124,10 +124,10 @@ export default function Home() {
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
                   <span className="text-primary-blue">Mengapa memilih</span>
                   <br />
-                  <span className="font-black bg-clip-text text-transparent bg-gradient-to-r from-lime-400 to-lime-600">Pintaru?</span>
+                  <span className="font-black bg-clip-text text-transparent bg-gradient-to-r from-lime-400 to-lime-600">Pinterra?</span>
                 </h2>
 
-                <p className="text-base sm:text-lg text-gray-700 leading-relaxed">Pintaru adalah platform pembelajaran inovatif yang menggabungkan kekuatan AI dengan pendekatan visual untuk membantu siswa memahami pelajaran dengan lebih baik. Dengan teknologi AI canggih, kami dapat memberikan penjelasan yang disesuaikan dengan gaya belajar setiap siswa, dilengkapi dengan video pembelajaran yang interaktif dan mudah dipahami.</p>
+                <p className="text-base sm:text-lg text-gray-700 leading-relaxed">Pinterra adalah platform pembelajaran inovatif yang menggabungkan kekuatan AI dengan pendekatan visual untuk membantu siswa memahami pelajaran dengan lebih baik. Dengan teknologi AI canggih, kami dapat memberikan penjelasan yang disesuaikan dengan gaya belajar setiap siswa, dilengkapi dengan video pembelajaran yang interaktif dan mudah dipahami.</p>
 
                 <div className="bg-white p-4 rounded-xl border-2 border-gray-100 shadow-md">
                   <div className="flex items-center gap-3">
@@ -191,7 +191,7 @@ export default function Home() {
               {/* Logo and Address */}
               <div className="flex flex-col gap-5">
                 <div className="flex items-center bg-white w-fit p-4 rounded-lg shadow-md border-2 border-lime-100 transform transition-all duration-300 hover:shadow-lg hover:scale-105">
-                  <Image src="/logo-expand.png" alt="Pintaru Logo" width={300} height={200} className="h-10 w-auto" />
+                  <Image src="/logo-expand.png" alt="Pinterra Logo" width={300} height={200} className="h-10 w-auto" />
                 </div>
                 <div className="bg-white/60 backdrop-blur-sm p-4 rounded-lg text-gray-700 border border-lime-100 shadow-sm">
                   <p className="font-medium">Universitas Indonesia, Depok</p>
@@ -210,8 +210,8 @@ export default function Home() {
                         <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                       </svg>
                     </div>
-                    <a href="mailto:info@pintaru.id" className="text-gray-700 hover:text-lime-500 transition-colors">
-                      info@pintaru.id
+                    <a href="mailto:info@pinterra.id" className="text-gray-700 hover:text-lime-500 transition-colors">
+                      info@pinterra.id
                     </a>
                   </div>
 
@@ -234,8 +234,8 @@ export default function Home() {
                         <circle cx="18" cy="6" r="0.5" fill="currentColor" />
                       </svg>
                     </div>
-                    <a href="https://instagram.com/pintaru.id" className="text-gray-700 hover:text-lime-500 transition-colors">
-                      pintaru.id
+                    <a href="https://instagram.com/pinterra.id" className="text-gray-700 hover:text-lime-500 transition-colors">
+                      pinterra.id
                     </a>
                   </div>
                 </div>
@@ -243,7 +243,7 @@ export default function Home() {
 
               {/* Quick Links */}
               <div className="flex flex-col gap-5">
-                <h3 className="text-xl font-bold text-white border-b-2 border-lime-300 pb-2 w-fit">Pintaru.id</h3>
+                <h3 className="text-xl font-bold text-white border-b-2 border-lime-300 pb-2 w-fit">Pinterra.id</h3>
                 <div className="flex flex-col gap-3">
                   <Link href="/dashboard" className="flex items-center gap-3 bg-white/60 backdrop-blur-sm p-3 rounded-lg border border-lime-100 shadow-sm transform transition-all duration-300 hover:shadow-md hover:scale-105 text-gray-700 hover:text-lime-500">
                     <div className="bg-lime-100 p-2 rounded-full">

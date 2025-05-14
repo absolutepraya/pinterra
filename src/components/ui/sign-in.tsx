@@ -47,7 +47,7 @@ function SignInPage() {
             <div className="mx-auto flex justify-center mb-3">
               <Image src="/logo-expand.svg" className="w-1/2" alt="Jawab.in Logo" width={300} height={300} priority />
             </div>
-            <CardTitle className="text-2xl font-bold text-center text-primary-blue">Masuk ke Akun PINTARU</CardTitle>
+            <CardTitle className="text-2xl font-bold text-center text-primary-blue">Masuk ke Akun Pinterra</CardTitle>
           </CardHeader>
           <CardContent className="grid gap-y-5 pt-4">
             <div className="relative group">

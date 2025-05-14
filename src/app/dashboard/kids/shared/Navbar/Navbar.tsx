@@ -42,8 +42,8 @@ const NavItem: FC<NavItemProps> = ({ icon: Icon, label, path, isActive }) => {
   const router = useRouter();
 
   return (
-    <div onClick={() => router.push(path)} className={cn('cursor-pointer transition-all flex flex-col items-center gap-1 w-20 py-1.5 rounded-md mx-1', isActive ? 'text-primary-yellow bg-yellow-50' : 'text-[#5D5D5D] hover:bg-gray-100 active:bg-gray-200')}>
-      <Icon fill={isActive ? '#d9a821' : '#5D5D5D'} width={20} height={20} />
+    <div onClick={() => router.push(path)} className={cn('cursor-pointer transition-all flex flex-col items-center gap-1 w-20 py-1.5 rounded-md mx-1', isActive ? 'text-lime-500 bg-lime-50' : 'text-[#5D5D5D] hover:bg-gray-100 active:bg-gray-200')}>
+      <Icon fill={isActive ? '#84cc16' : '#5D5D5D'} width={20} height={20} />
       <span className="text-xs font-semibold">{label}</span>
     </div>
   );
@@ -53,8 +53,8 @@ const MobileNavItem: FC<NavItemProps> = ({ icon: Icon, label, path, isActive }) 
   const router = useRouter();
 
   return (
-    <div onClick={() => router.push(path)} className={cn('cursor-pointer transition-all flex items-center gap-3 py-3 px-4 rounded-md w-full', isActive ? 'text-primary-yellow bg-yellow-50' : 'text-[#5D5D5D] hover:bg-gray-100 active:bg-gray-200')}>
-      <Icon fill={isActive ? '#d9a821' : '#5D5D5D'} width={20} height={20} />
+    <div onClick={() => router.push(path)} className={cn('cursor-pointer transition-all flex items-center gap-3 py-3 px-4 rounded-md w-full', isActive ? 'text-lime-500 bg-lime-50' : 'text-[#5D5D5D] hover:bg-gray-100 active:bg-gray-200')}>
+      <Icon fill={isActive ? '#84cc16' : '#5D5D5D'} width={20} height={20} />
       <span className="font-semibold">{label}</span>
     </div>
   );
@@ -97,15 +97,15 @@ export default function Navbar() {
             {/* Profile/XP Section - 1/5 width */}
             <div className="col-span-1 flex justify-end">
               <div className="flex items-center">
-                <div className="flex items-center gap-2 bg-amber-50 py-1 px-2 rounded-lg border border-amber-100">
+                <div className="flex items-center gap-2 bg-lime-50 py-1 px-2 rounded-lg border border-lime-100">
                   <div className="flex items-center gap-2">
                     <div className="text-xs font-bold">
-                      <span className="bg-blue-600 text-white px-1.5 py-0.5 rounded-l-md">EXP</span>
-                      <span className="bg-amber-300 text-blue-800 px-1.5 py-0.5 rounded-r-md">0/60</span>
+                      <span className="bg-teal-600 text-white px-1.5 py-0.5 rounded-l-md">EXP</span>
+                      <span className="bg-lime-300 text-teal-800 px-1.5 py-0.5 rounded-r-md">0/60</span>
                     </div>
-                    <Stars size={14} className="text-amber-500" />
+                    <Stars size={14} className="text-lime-500" />
                   </div>
-                  <div className="w-8 h-8 bg-amber-400 rounded-full flex items-center justify-center shadow-inner">
+                  <div className="w-8 h-8 bg-lime-400 rounded-full flex items-center justify-center shadow-inner">
                     <User size={16} className="text-white" />
                   </div>
                 </div>
@@ -123,12 +123,12 @@ export default function Navbar() {
           </Link>
 
           <div className="flex items-center gap-2">
-            <div className="flex items-center gap-1 bg-amber-50 py-0.5 px-2 rounded-lg border border-amber-100">
+            <div className="flex items-center gap-1 bg-lime-50 py-0.5 px-2 rounded-lg border border-lime-100">
               <div className="text-xs">
-                <span className="bg-blue-600 text-white px-1 py-0.5 rounded-l-md text-xs">EXP</span>
-                <span className="bg-amber-300 text-blue-800 px-1 py-0.5 rounded-r-md text-xs">0/60</span>
+                <span className="bg-teal-600 text-white px-1 py-0.5 rounded-l-md text-xs">EXP</span>
+                <span className="bg-lime-300 text-teal-800 px-1 py-0.5 rounded-r-md text-xs">0/60</span>
               </div>
-              <Stars size={12} className="text-amber-500" />
+              <Stars size={12} className="text-lime-500" />
             </div>
             <button onClick={toggleMenu} className="p-1.5 rounded-md hover:bg-gray-100" aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}>
               {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -136,8 +136,6 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-
-
 
       {isMenuOpen && (
         <div className="absolute inset-x-0 top-[54px] bg-white z-20 sm:hidden border-b border-gray-200 shadow-md">

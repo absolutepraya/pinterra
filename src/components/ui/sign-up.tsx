@@ -18,9 +18,9 @@ function StepIndicator({ currentStep, totalSteps }: { currentStep: number; total
       <div className="flex items-center justify-center gap-8">
         {Array.from({ length: totalSteps }).map((_, index) => (
           <div key={index} className="flex flex-col items-center relative">
-            <div className={`w-8 h-8 rounded-full flex items-center justify-center ${index < currentStep ? 'bg-primary-blue text-white' : index === currentStep ? 'bg-primary-blue/10 border-2 border-primary-blue text-primary-blue' : 'bg-gray-100 text-gray-400'}`}>{index < currentStep ? <CheckCircle2 size={16} /> : index + 1}</div>
+            <div className={`w-8 h-8 rounded-full flex items-center justify-center ${index < currentStep ? 'bg-teal-600 text-white' : index === currentStep ? 'bg-teal-600/10 border-2 border-teal-600 text-teal-600' : 'bg-gray-100 text-gray-400'}`}>{index < currentStep ? <CheckCircle2 size={16} /> : index + 1}</div>
             <span className="text-xs mt-1 text-center w-20 truncate">{index === 0 ? 'Account Info' : 'Account Type'}</span>
-            {index < totalSteps - 1 && <div className={`absolute top-4 left-full w-[calc(100%)] h-0.5 -ml-6 ${index < currentStep ? 'bg-primary-blue' : 'bg-gray-200'}`}></div>}
+            {index < totalSteps - 1 && <div className={`absolute top-4 left-full w-[calc(100%)] h-0.5 -ml-6 ${index < currentStep ? 'bg-teal-600' : 'bg-gray-200'}`}></div>}
           </div>
         ))}
       </div>
@@ -123,7 +123,7 @@ function SignUpPage() {
             <div className="mx-auto flex justify-center mb-6">
               <Image src="/logo-expand.svg" className="w-1/2" alt="Jawab.in Logo" width={300} height={300} priority />
             </div>
-            <CardTitle className="text-2xl font-bold text-center text-primary-blue mb-5">Daftar Akun Pinterra</CardTitle>
+            <CardTitle className="text-2xl font-bold text-center text-teal-600 mb-5">Daftar Akun Pinterra</CardTitle>
 
             <StepIndicator currentStep={currentStep} totalSteps={totalSteps} />
           </CardHeader>
@@ -133,26 +133,26 @@ function SignUpPage() {
             {currentStep === 0 && (
               <>
                 <div className="relative group">
-                  <Input type="text" required id="full_name" name="full_name" value={formData.full_name} onChange={handleInputChange} className="pl-11 h-12 rounded-lg border-input/80 transition-all focus:border-primary/80 focus:ring-2 focus:ring-primary/20" placeholder="Enter your full name" />
-                  <UserRound className="absolute top-1/2 left-6 transform -translate-x-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-primary transition-colors" />
+                  <Input type="text" required id="full_name" name="full_name" value={formData.full_name} onChange={handleInputChange} className="pl-11 h-12 rounded-lg border-input/80 transition-all focus:border-teal-500/80 focus:ring-2 focus:ring-teal-500/20" placeholder="Enter your full name" />
+                  <UserRound className="absolute top-1/2 left-6 transform -translate-x-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-teal-500 transition-colors" />
                 </div>
 
                 <div className="relative group">
-                  <Input type="email" required id="email" name="email" value={formData.email} onChange={handleInputChange} className="pl-11 h-12 rounded-lg border-input/80 transition-all focus:border-primary/80 focus:ring-2 focus:ring-primary/20" placeholder="Enter your email address" />
-                  <Mail className="absolute top-1/2 left-6 transform -translate-x-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-primary transition-colors" />
+                  <Input type="email" required id="email" name="email" value={formData.email} onChange={handleInputChange} className="pl-11 h-12 rounded-lg border-input/80 transition-all focus:border-teal-500/80 focus:ring-2 focus:ring-teal-500/20" placeholder="Enter your email address" />
+                  <Mail className="absolute top-1/2 left-6 transform -translate-x-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-teal-500 transition-colors" />
                 </div>
 
                 <div className="relative group">
-                  <Input type={showPassword ? 'text' : 'password'} required id="password" name="password" value={formData.password} onChange={handleInputChange} className="pl-11 h-12 rounded-lg border-input/80 transition-all focus:border-primary/80 focus:ring-2 focus:ring-primary/20" placeholder="Enter your password" />
-                  <KeyRound className="absolute top-1/2 left-6 transform -translate-x-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-primary transition-colors" />
-                  {showPassword ? <EyeOff className="absolute top-1/2 right-2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer text-muted-foreground hover:text-primary transition-colors" onClick={() => setShowPassword(false)} /> : <Eye className="absolute top-1/2 right-2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer text-muted-foreground hover:text-primary transition-colors" onClick={() => setShowPassword(true)} />}
+                  <Input type={showPassword ? 'text' : 'password'} required id="password" name="password" value={formData.password} onChange={handleInputChange} className="pl-11 h-12 rounded-lg border-input/80 transition-all focus:border-teal-500/80 focus:ring-2 focus:ring-teal-500/20" placeholder="Enter your password" />
+                  <KeyRound className="absolute top-1/2 left-6 transform -translate-x-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-teal-500 transition-colors" />
+                  {showPassword ? <EyeOff className="absolute top-1/2 right-2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer text-muted-foreground hover:text-teal-500 transition-colors" onClick={() => setShowPassword(false)} /> : <Eye className="absolute top-1/2 right-2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer text-muted-foreground hover:text-teal-500 transition-colors" onClick={() => setShowPassword(true)} />}
                 </div>
 
                 {isPasswordNotEmpty && (
                   <div className="relative group">
-                    <Input type={showConfirmPassword ? 'text' : 'password'} required id="confirm_password" name="confirm_password" value={formData.confirm_password} onChange={handleInputChange} className="pl-11 h-12 rounded-lg border-input/80 transition-all focus:border-primary/80 focus:ring-2 focus:ring-primary/20" placeholder="Confirm your password" />
-                    <KeyRound className="absolute top-1/2 left-6 transform -translate-x-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-primary transition-colors" />
-                    {showConfirmPassword ? <EyeOff className="absolute top-1/2 right-2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer text-muted-foreground hover:text-primary transition-colors" onClick={() => setShowConfirmPassword(false)} /> : <Eye className="absolute top-1/2 right-2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer text-muted-foreground hover:text-primary transition-colors" onClick={() => setShowConfirmPassword(true)} />}
+                    <Input type={showConfirmPassword ? 'text' : 'password'} required id="confirm_password" name="confirm_password" value={formData.confirm_password} onChange={handleInputChange} className="pl-11 h-12 rounded-lg border-input/80 transition-all focus:border-teal-500/80 focus:ring-2 focus:ring-teal-500/20" placeholder="Confirm your password" />
+                    <KeyRound className="absolute top-1/2 left-6 transform -translate-x-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-teal-500 transition-colors" />
+                    {showConfirmPassword ? <EyeOff className="absolute top-1/2 right-2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer text-muted-foreground hover:text-teal-500 transition-colors" onClick={() => setShowConfirmPassword(false)} /> : <Eye className="absolute top-1/2 right-2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer text-muted-foreground hover:text-teal-500 transition-colors" onClick={() => setShowConfirmPassword(true)} />}
                   </div>
                 )}
               </>
@@ -162,18 +162,18 @@ function SignUpPage() {
             {currentStep === 1 && (
               <div className="space-y-2">
                 <div className="flex items-center justify-between mb-1">
-                  <Label className="text-sm font-medium text-primary">Account Type</Label>
+                  <Label className="text-sm font-medium text-lime-500">Account Type</Label>
                   <span className="text-xs text-muted-foreground">Select one</span>
                 </div>
                 <div className="grid grid-cols-2 gap-3">
-                  <div onClick={() => setAccountType('kids')} className={`relative flex flex-col items-center justify-center   h-32 cursor-pointer rounded-lg border p-2.5 transition-all duration-200 hover:border-primary/50 ${accountType === 'kids' ? 'border-primary text-white bg-primary-blue' : 'border-input/60 text-black'}`}>
+                  <div onClick={() => setAccountType('kids')} className={`relative flex flex-col items-center justify-center h-32 cursor-pointer rounded-lg border p-2.5 transition-all duration-200 hover:border-teal-500/50 ${accountType === 'kids' ? 'border-teal-500 text-white bg-teal-600' : 'border-input/60 text-black'}`}>
                     <BookOpen size={40} fill={accountType === 'kids' ? 'white' : 'black'} />
 
                     <p className="font-bold">Saya Anak / Pelajar</p>
                     <p>Kids</p>
                   </div>
 
-                  <div onClick={() => setAccountType('teens')} className={`relative flex flex-col items-center justify-center h-32 cursor-pointer rounded-lg border p-2.5 transition-all duration-200 hover:border-primary/50 ${accountType === 'teens' ? 'border-primary text-white bg-primary-yellow ring-2' : 'border-input/60 text-black'}`}>
+                  <div onClick={() => setAccountType('teens')} className={`relative flex flex-col items-center justify-center h-32 cursor-pointer rounded-lg border p-2.5 transition-all duration-200 hover:border-lime-500/50 ${accountType === 'teens' ? 'border-lime-500 text-white bg-lime-500 ring-2' : 'border-input/60 text-black'}`}>
                     <Video size={40} fill={accountType === 'teens' ? 'white' : 'black'} />
 
                     <p className="font-bold">Saya Remaja / Dewasa</p>
@@ -192,7 +192,7 @@ function SignUpPage() {
                     Back
                   </Button>
                 )}
-                <Button type="submit" className={`h-12 text-base font-semibold transition-all duration-300 hover:shadow-lg ${currentStep > 0 ? 'w-2/3' : 'w-full'}`}>
+                <Button type="submit" className={`h-12 text-base font-semibold transition-all duration-300 hover:shadow-lg bg-teal-600 hover:bg-teal-700 ${currentStep > 0 ? 'w-2/3' : 'w-full'}`}>
                   {currentStep === totalSteps - 1 ? 'Sign up' : 'Next step'}
                 </Button>
               </div>
@@ -201,9 +201,9 @@ function SignUpPage() {
                 <div className="absolute w-full border-t border-input/50"></div>
                 <span className="relative px-2 bg-white text-xs text-muted-foreground">OR</span>
               </div>
-              <Button variant="outline" size="sm" className="w-full h-11 border border-input/80 hover:border-primary/30 hover:bg-primary/5 transition-all font-medium" asChild>
+              <Button variant="outline" size="sm" className="w-full h-11 border border-input/80 hover:border-lime-500/30 hover:bg-lime-500/5 transition-all font-medium" asChild>
                 <Link href="/auth/login" className="flex gap-1 items-center justify-center">
-                  Already have an account? <span className="text-primary font-semibold">Log in</span>
+                  Already have an account? <span className="text-lime-500 font-semibold">Log in</span>
                 </Link>
               </Button>
             </div>

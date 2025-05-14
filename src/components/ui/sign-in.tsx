@@ -15,7 +15,7 @@ function SubmitButton() {
   const { pending } = useFormStatus();
 
   return (
-    <Button type="submit" disabled={pending} className="w-full h-12 text-base font-semibold transition-all duration-300 hover:shadow-lg">
+    <Button type="submit" disabled={pending} className="w-full h-12 text-base font-semibold transition-all duration-300 hover:shadow-lg bg-teal-600 hover:bg-teal-700">
       {pending ? 'Signing in...' : 'Sign in'}
     </Button>
   );
@@ -47,18 +47,18 @@ function SignInPage() {
             <div className="mx-auto flex justify-center mb-3">
               <Image src="/logo-expand.svg" className="w-1/2" alt="Jawab.in Logo" width={300} height={300} priority />
             </div>
-            <CardTitle className="text-2xl font-bold text-center text-primary-blue">Masuk ke Akun Pinterra</CardTitle>
+            <CardTitle className="text-2xl font-bold text-center text-teal-600">Masuk ke Akun Pinterra</CardTitle>
           </CardHeader>
           <CardContent className="grid gap-y-5 pt-4">
             <div className="relative group">
-              <Input type="email" required id="email" name="email" className="pl-11 h-12 rounded-lg border-input/80 transition-all focus:border-primary/80 focus:ring-2 focus:ring-primary/20" placeholder="Enter your email address" />
-              <Mail className="absolute top-1/2 left-6 transform -translate-x-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-primary transition-colors" />
+              <Input type="email" required id="email" name="email" className="pl-11 h-12 rounded-lg border-input/80 transition-all focus:border-teal-500/80 focus:ring-2 focus:ring-teal-500/20" placeholder="Enter your email address" />
+              <Mail className="absolute top-1/2 left-6 transform -translate-x-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-teal-500 transition-colors" />
             </div>
 
             <div className="relative group">
-              <Input type={showPassword ? 'text' : 'password'} required id="password" name="password" className="pl-11 h-12 rounded-lg border-input/80 transition-all focus:border-primary/80 focus:ring-2 focus:ring-primary/20" placeholder="Enter your password" />
-              <KeyRound className="absolute top-1/2 left-6 transform -translate-x-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-primary transition-colors" />
-              {showPassword ? <EyeOff className="absolute top-1/2 right-2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer text-muted-foreground hover:text-primary transition-colors" onClick={() => setShowPassword(false)} /> : <Eye className="absolute top-1/2 right-2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer text-muted-foreground hover:text-primary transition-colors" onClick={() => setShowPassword(true)} />}
+              <Input type={showPassword ? 'text' : 'password'} required id="password" name="password" className="pl-11 h-12 rounded-lg border-input/80 transition-all focus:border-teal-500/80 focus:ring-2 focus:ring-teal-500/20" placeholder="Enter your password" />
+              <KeyRound className="absolute top-1/2 left-6 transform -translate-x-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-teal-500 transition-colors" />
+              {showPassword ? <EyeOff className="absolute top-1/2 right-2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer text-muted-foreground hover:text-teal-500 transition-colors" onClick={() => setShowPassword(false)} /> : <Eye className="absolute top-1/2 right-2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer text-muted-foreground hover:text-teal-500 transition-colors" onClick={() => setShowPassword(true)} />}
             </div>
 
             {/* <div className='flex justify-end'>
@@ -80,9 +80,9 @@ function SignInPage() {
                 <div className="absolute w-full border-t border-input/50"></div>
                 <span className="relative px-2 bg-white text-xs text-muted-foreground">OR</span>
               </div>
-              <Button variant="outline" size="sm" className="w-full h-11 border border-input/80 hover:border-primary/30 hover:bg-primary/5 transition-all font-medium" asChild>
+              <Button variant="outline" size="sm" className="w-full h-11 border border-input/80 hover:border-lime-500/30 hover:bg-lime-500/5 transition-all font-medium" asChild>
                 <Link href="/auth/register" className="flex gap-1 items-center justify-center">
-                  Don&apos;t have an account? <span className="text-primary font-semibold">Sign up</span>
+                  Don&apos;t have an account? <span className="text-lime-500 font-semibold">Sign up</span>
                 </Link>
               </Button>
             </div>

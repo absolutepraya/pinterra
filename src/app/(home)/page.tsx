@@ -182,7 +182,7 @@ export default function Home() {
         </section>
 
         {/* Footer - Styled to match dashboard */}
-        <footer className="w-full bg-secondary-yellow py-12 border-t relative overflow-hidden">
+        <footer className="w-full bg-lime-400 py-12 border-t relative overflow-hidden">
           <div className="absolute -top-10 left-1/3 h-20 w-20 rounded-full bg-lime-300 opacity-20"></div>
           <div className="absolute bottom-10 right-10 h-16 w-16 rounded-full bg-lime-400 opacity-10"></div>
 

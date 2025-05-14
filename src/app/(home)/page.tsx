@@ -19,7 +19,7 @@ export default function Home() {
 
             <div className="w-full flex flex-col-reverse md:flex-row-reverse gap-8 md:gap-12 items-center z-10 max-w-6xl">
               <div className="w-full md:w-1/2 rounded-xl bg-white p-4 md:p-6 h-[250px] sm:h-[300px] md:h-[450px] flex items-center justify-center shadow-lg border-2 border-gray-100 transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                <MacbookPro src="/demo.gif" className="w-full h-full rounded-lg" />
+                <MacbookPro src="/demo.png" className="w-full h-full rounded-lg" />
               </div>
 
               <div className="w-full md:w-1/2 space-y-4 sm:space-y-6 md:max-w-[90%]">

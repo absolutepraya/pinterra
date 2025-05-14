@@ -38,7 +38,7 @@ export default function Home() {
                 </h1>
 
                 <p className="text-base sm:text-lg text-gray-700 leading-relaxed lg:w-xl">
-                  Dengan <span className="font-bold text-primary-blue">PINTARU</span>, cukup ketik atau unggah soal, dan kamu akan langsung mendapatkan penjelasan visual berbentuk video atau cerita interaktif. Cocok untuk anak-anak, pelajar, dan siapa pun yang ingin belajar dengan cara yang berbeda.
+                  Dengan <span className="font-bold text-primary-blue">Pinterra</span>, cukup ketik atau unggah soal, dan kamu akan langsung mendapatkan penjelasan visual berbentuk video atau cerita interaktif. Cocok untuk anak-anak, pelajar, dan siapa pun yang ingin belajar dengan cara yang berbeda.
                 </p>
 
                 <div className="pt-4 flex flex-wrap justify-between">
@@ -191,7 +191,8 @@ export default function Home() {
               {/* Logo and Address */}
               <div className="flex flex-col gap-5">
                 <div className="flex items-center bg-white w-fit p-4 rounded-lg shadow-md border-2 border-lime-100 transform transition-all duration-300 hover:shadow-lg hover:scale-105">
-                  <Image src="/logo-expand.png" alt="Pinterra Logo" width={300} height={200} className="h-10 w-auto" />
+                  <Image src="/logo-small.webp" alt="Pinterra Logo" width={300} height={200} className="h-10 w-auto" />
+                  <p className="ml-3 font-bold text-4xl text-[#008094]">Pinterra</p>
                 </div>
                 <div className="bg-white/60 backdrop-blur-sm p-4 rounded-lg text-gray-700 border border-lime-100 shadow-sm">
                   <p className="font-medium">Universitas Indonesia, Depok</p>
@@ -256,7 +257,7 @@ export default function Home() {
             </div>
 
             <div className="mt-12 pt-6 text-center border-t border-lime-300/50">
-              <p className="text-white font-medium">Copyright © 2025 UINNOVATORS</p>
+              <p className="text-white font-medium">Copyright © 2025 Manifesteam</p>
             </div>
           </div>
         </footer>

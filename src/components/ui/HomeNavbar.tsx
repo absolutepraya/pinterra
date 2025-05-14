@@ -108,7 +108,7 @@ export default function HomeNavbar() {
       >
         <div className="flex items-center justify-between">
           <Link href="/">
-            <motion.img src="/logo-expand.svg" alt="logo" style={{ height: useTransform(logoHeight, (h) => `${h * 0.25}rem`) }} className="w-auto" />
+            <motion.img src="/logo-expand.webp" alt="logo" style={{ height: useTransform(logoHeight, (h) => `${h * 0.25}rem`) }} className="w-auto" />
           </Link>
           <div className="flex items-center gap-4 pr-10">
             {!isLoading && user ? (
@@ -148,7 +148,7 @@ export default function HomeNavbar() {
       >
         <div className="flex items-center relative justify-between">
           <Link href="/">
-            <motion.img src="/logo-expand.svg" alt="logo" style={{ height: useTransform(logoHeight, (h) => `${h * 0.175}rem`) }} className="w-auto" />
+            <motion.img src="/logo-expand.webp" alt="logo" style={{ height: useTransform(logoHeight, (h) => `${h * 0.175}rem`) }} className="w-auto" />
           </Link>
           <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2 rounded-md hover:bg-gray-100" aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}>
             {isMenuOpen ? <X size={20} /> : <Menu size={20} />}

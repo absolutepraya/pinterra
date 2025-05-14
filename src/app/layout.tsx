@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'Pinterra',
-  description: 'Pinterra by UINNOVATORS',
+  description: 'Pinterra by Manifesteam',
 };
 
 export default function RootLayout({

@@ -81,7 +81,7 @@ export default function Navbar() {
             {/* Logo Section - 1/5 width */}
             <div className="col-span-1 flex items-center">
               <Link href="/" className="flex items-center">
-                <img src="/logo-expand.svg" alt="logo" className="h-7 w-auto" />
+                <img src="/logo-expand.webp" alt="logo" className="h-7 w-auto" />
               </Link>
             </div>
 
@@ -119,7 +119,7 @@ export default function Navbar() {
       <nav className="bg-white px-4 py-2 sm:hidden border-b border-b-[#F5F5F5] shadow-md z-30">
         <div className="flex items-center justify-between">
           <Link href="/">
-            <img src="/logo-expand.svg" alt="logo" className="h-6 w-auto" />
+            <img src="/logo-expand.webp" alt="logo" className="h-6 w-auto" />
           </Link>
 
           <div className="flex items-center gap-2">

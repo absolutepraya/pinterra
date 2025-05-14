@@ -121,7 +121,7 @@ function SignUpPage() {
         <Card className="w-full sm:w-full border-none shadow-xl bg-white/90 backdrop-blur-sm rounded-xl">
           <CardHeader className="space-y-3">
             <div className="mx-auto flex justify-center mb-6">
-              <Image src="/logo-expand.svg" className="w-1/2" alt="Jawab.in Logo" width={300} height={300} priority />
+              <Image src="/logo-expand.webp" className="w-1/2" alt="Jawab.in Logo" width={300} height={300} priority />
             </div>
             <CardTitle className="text-2xl font-bold text-center text-teal-600 mb-5">Daftar Akun Pinterra</CardTitle>
 
